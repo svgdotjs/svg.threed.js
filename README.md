@@ -13,4 +13,4 @@ It needs:
 - implementation of the normals
 - camera's to rotate the view (now the object is rotated around its centre)
 - lights
-- and many thinsg more!
+- and many things more!

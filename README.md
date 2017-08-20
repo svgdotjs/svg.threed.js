@@ -10,7 +10,7 @@ This is nowhere near a finished product, just a proof of concept. It features:
 
 It needs:
 - ability to draw faces
-- implementation of the normals
+- implementation of the normals to detect font/back side of the faces
 - camera's to rotate the view (now the object is rotated around its centre)
 - lights
-- and many things more!
+- and many, many things more!

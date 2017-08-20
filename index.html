@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG.js - Three D</title>
+</head>
+<body>
+  <div id="drawing"></div>
+  <script src="js/svg.js"></script>
+  <script src="svg.threed.js"></script>
+  <script>
+    var x = 0
+      , y = 0
+
+    // create drawing board
+    var draw = SVG('drawing').size(800, 800)
+
+    // create 3D scene
+    var scene = draw.scene(800, 800)
+
+    // create cube
+    // var cube = scene.cube(40,40,40)
+    //   .center(600, 200)
+    //   .stroke({ color: '#f06', width: 1 })
+    //   .rotate(10, 30)
+
+    // create element
+    var element = scene.element(300,300,300)
+      .center(600,400)
+      .stroke({ color: '#f06', width: 0.3 })
+      .fill('#f06')
+      .rotate(10, 30)
+
+    
+
+    SVG.on(document, 'mousemove', function(e) {
+      x = -e.pageY
+      y =  e.pageX
+    })
+
+    setInterval(function() {
+      // cube.rotate(x, y)
+      element.rotate(x, y)
+    }, 1000/60)
+    
+    // animate cube
+    /*draw.animate('3s', '<>', '2s').during(function(pos, morph, eased) {
+      cube.rotate(120 * eased, 400 * eased)
+    })*/
+  </script>
+</body>
+</html>
